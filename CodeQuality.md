@@ -296,6 +296,7 @@ In React, useMemo is used to efficiently calculate derived properties based on s
 
 - The component uses <> (short syntax for React.Fragment) to wrap multiple elements without adding an extra div to the DOM.
 - Fragments are useful because they allow you to group multiple elements without introducing additional DOM nodes, which can make the markup cleaner and prevent unnecessary styling or layout issues caused by extra wrapper elements.
+
 ✅ Correct Usage:
 ![alt text](assets/fragments.png)
 
