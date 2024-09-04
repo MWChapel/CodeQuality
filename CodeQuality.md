@@ -1,11 +1,11 @@
 
-# Code Quality
+# Code Quality Guidelines
 
 Code quality in React, TypeScript, and JavaScript is essential to ensure maintainable, scalable, and efficient applications. Key requirements include writing clean, readable, and well-structured code by following established patterns like component modularization in React. TypeScript adds an extra layer by enforcing type safety, reducing runtime errors and improving overall reliability. Consistent formatting with tools like Prettier or ESLint helps maintain uniformity across the codebase. Best practices also involve avoiding unnecessary re-renders, optimizing performance with techniques like memoization, and ensuring proper test coverage to catch bugs early. Altogether, these practices contribute to better collaboration, fewer errors, and a more robust application.
 
 ## Table of Contents
 
-- [Code Quality](#code-quality)
+- [Code Quality Guidelines](#code-quality-guidelines)
   - [Table of Contents](#table-of-contents)
   - [Javascript](#javascript)
     - [ESLint and Prettier](#eslint-and-prettier)
