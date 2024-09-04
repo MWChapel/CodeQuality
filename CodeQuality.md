@@ -30,6 +30,7 @@ Code quality in React, TypeScript, and JavaScript is essential to ensure maintai
   - [React](#react)
     - [Keep Components Small](#keep-components-small)
     - [Component Comments](#component-comments)
+    - [State Management](#state-management)
     - [Responsive Views](#responsive-views)
     - [Accessibility coverage](#accessibility-coverage)
     - [Accessibility Tools using Lighthouse](#accessibility-tools-using-lighthouse)
@@ -192,6 +193,14 @@ When commenting React components and props, focus on explaining the component's 
 
 ✅ Correct Usage:
 ![alt text](assets/fully-commented.png)
+
+### State Management
+
+- `Local State`: Use React’s built-in hook `useState` for local component state.
+
+- `Global State`: For larger applications, consider using state management library, Redux, or the Context API(`useContext`). Be aware when using `useContext` any updates to the context state in one component will initiate a re-render in ALL components that use the same context.
+
+- `Avoid Prop Drilling`: If you find yourself passing props down multiple levels, it might be time to refactor using context or a state management library.
 
 ### Responsive Views
 
