@@ -45,6 +45,10 @@ Code quality in React, TypeScript, and JavaScript is essential to ensure maintai
     - [Create Custom Hooks](#create-custom-hooks)
     - [Use useCallback and useEffect with the proper dependencies](#use-usecallback-and-useeffect-with-the-proper-dependencies)
     - [Use useMemo to recalculate a derived value from a state change](#use-usememo-to-recalculate-a-derived-value-from-a-state-change)
+    - [Use Fragments when possible](#use-fragments-when-possible)
+    - [Use useDeferredValue on large arrays](#use-usedeferredvalue-on-large-arrays)
+    - [Use useLayoutEffect](#use-uselayouteffect)
+    - [Lazy Loading and Suspense in React](#lazy-loading-and-suspense-in-react)
     - [Avoid infinite API Calls or infinite state changes inside loops](#avoid-infinite-api-calls-or-infinite-state-changes-inside-loops)
     - [Don't use dangerouslySetInnerHtml](#dont-use-dangerouslysetinnerhtml)
     - [Unregister and clean up timers](#unregister-and-clean-up-timers)
@@ -287,6 +291,35 @@ In React, useMemo is used to efficiently calculate derived properties based on s
 
 ✅ Correct Usage:
 ![alt text](assets/usememo-derived.png)
+
+### Use Fragments when possible
+
+- The component uses <> (short syntax for React.Fragment) to wrap multiple elements without adding an extra div to the DOM.
+- Fragments are useful because they allow you to group multiple elements without introducing additional DOM nodes, which can make the markup cleaner and prevent unnecessary styling or layout issues caused by extra wrapper elements.
+✅ Correct Usage:
+![alt text](assets/fragments.png)
+
+### Use useDeferredValue on large arrays
+
+`useDeferredValue` is useful when working with large arrays in React because it defers updates to a value, preventing expensive operations like filtering or rendering from blocking the UI. In scenarios with large datasets, immediate recalculations can slow down the app, but by deferring the input value, React can prioritize rendering updates first, ensuring a smoother user experience without lag.
+
+✅ Correct Usage:
+![alt text](assets/usedeferred.png)
+
+### Use useLayoutEffect
+
+`useLayoutEffect` is useful in React when you need to perform DOM measurements or manipulations before the browser paints the screen. Unlike useEffect, which runs after the render, useLayoutEffect runs synchronously after all DOM mutations but before the screen update, ensuring that any layout changes or measurements are applied without causing visual flickering or delays in rendering.
+
+✅ Correct Usage:
+![alt text](assets/uselayout.png)
+
+### Lazy Loading and Suspense in React
+
+Lazy loading components and images in React improves performance by reducing the initial load time, as only the necessary resources are loaded upfront. This approach ensures that non-critical components and images are loaded on demand, enhancing the user experience, especially in large or image-heavy applications.
+
+✅ Correct Usage:
+![alt text](assets/lazy2.png)
+![alt text](assets/lazy1.png)
 
 ### Avoid infinite API Calls or infinite state changes inside loops
 
