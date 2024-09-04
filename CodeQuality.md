@@ -10,6 +10,7 @@ Code quality in React, TypeScript, and JavaScript is essential to ensure maintai
   - [Javascript](#javascript)
     - [ESLint and Prettier](#eslint-and-prettier)
     - [Linter Errors](#linter-errors)
+    - [Feature Flags](#feature-flags)
     - [PR Descriptions and Git Commits](#pr-descriptions-and-git-commits)
     - [Remove Console.logs](#remove-consolelogs)
     - [Modules and Imports](#modules-and-imports)
@@ -60,6 +61,10 @@ Using ESLint and Prettier in React is crucial for maintaining consistent code qu
 ### Linter Errors
 
 Addressing linter errors in React helps maintain consistent code quality, catch potential bugs early, and enforce best practices, ensuring the codebase remains clean, efficient, and easy to maintain.
+
+### Feature Flags
+
+Using feature flags in React code is important for enabling or disabling new features in a controlled manner, allowing teams to roll out changes incrementally and safely. This approach helps mitigate risk by testing features in production with specific user groups, ensuring stability and making it easier to roll back or adjust features without redeploying the entire application. Additionally, it supports faster development cycles and improves overall user experience by allowing seamless experimentation and A/B testing.
 
 ❌ Incorrect Usage:
 ![alt text](assets/linter-error.png)
