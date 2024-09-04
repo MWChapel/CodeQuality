@@ -66,12 +66,12 @@ Using ESLint and Prettier in React is crucial for maintaining consistent code qu
 
 Addressing linter errors in React helps maintain consistent code quality, catch potential bugs early, and enforce best practices, ensuring the codebase remains clean, efficient, and easy to maintain.
 
+❌ Incorrect Usage:
+![alt text](assets/linter-error.png)
+
 ### Feature Flags
 
 Using feature flags in React code is important for enabling or disabling new features in a controlled manner, allowing teams to roll out changes incrementally and safely. This approach helps mitigate risk by testing features in production with specific user groups, ensuring stability and making it easier to roll back or adjust features without redeploying the entire application. Additionally, it supports faster development cycles and improves overall user experience by allowing seamless experimentation and A/B testing.
-
-❌ Incorrect Usage:
-![alt text](assets/linter-error.png)
 
 ### PR Descriptions and Git Commits
 
