@@ -10,6 +10,7 @@ Code quality in React, TypeScript, and JavaScript is essential to ensure maintai
   - [Javascript](#javascript)
     - [ESLint and Prettier](#eslint-and-prettier)
     - [Linter Errors](#linter-errors)
+    - [Use the spread operator](#use-the-spread-operator)
     - [Feature Flags](#feature-flags)
     - [PR Descriptions and Git Commits](#pr-descriptions-and-git-commits)
     - [Remove Console.logs](#remove-consolelogs)
@@ -31,6 +32,7 @@ Code quality in React, TypeScript, and JavaScript is essential to ensure maintai
     - [Keep Components Small](#keep-components-small)
     - [Component Comments](#component-comments)
     - [State Management](#state-management)
+    - [Use arrow functions](#use-arrow-functions)
     - [Responsive Views](#responsive-views)
     - [Accessibility coverage](#accessibility-coverage)
     - [Accessibility Tools using Lighthouse](#accessibility-tools-using-lighthouse)
@@ -69,6 +71,13 @@ Addressing linter errors in React helps maintain consistent code quality, catch 
 
 ❌ Incorrect Usage:
 ![alt text](assets/linter-error.png)
+
+### Use the spread operator
+
+Using the spread operator is better because it simplifies the code, avoids missing or overriding properties by accident, and makes it easier to manage updates when the object structure becomes more complex.
+
+Usage:
+![alt text](assets/spread.png)
 
 ### Feature Flags
 
@@ -201,6 +210,13 @@ When commenting React components and props, focus on explaining the component's 
 - `Global State`: For larger applications, consider using state management library, Redux, or the Context API(`useContext`). Be aware when using `useContext` any updates to the context state in one component will initiate a re-render in ALL components that use the same context.
 
 - `Avoid Prop Drilling`: If you find yourself passing props down multiple levels, it might be time to refactor using context or a state management library.
+
+### Use arrow functions
+
+Arrow functions are often preferred for event handlers in modern React due to their cleaner syntax and automatic binding behavior.
+
+✅ Correct Usage:
+![alt text](assets/arrow.png)
 
 ### Responsive Views
 
