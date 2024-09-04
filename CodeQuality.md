@@ -95,8 +95,7 @@ Unit testing React components with Jest and React Testing Library ensures that i
 
 ### Null and Undefined
 
-Prefer undefined over null for optional properties. Use optional chaining (?.) and nullish coalescing (??) to handle undefined values
-safely.
+Prefer undefined over null for optional properties. Use optional chaining (?.) and nullish coalescing (??) to handle undefined values safely.
 
 ✅ Correct Usage:
 ![alt text](assets/null-handling.png)
@@ -229,21 +228,21 @@ In React, JSX property keys are essential for uniquely identifying elements when
 
 ### Unused Properties
 
-Unused properties in React components can lead to unnecessary complexity and potential performance issues, so it's important to remove them
+Unused properties in React components can lead to unnecessary complexity and potential performance issues, so it's important to remove them.
   
 ❌ Incorrect Usage:
 ![alt text](assets/unused-prop.png)
 
 ### Naming Conventions
 
-In React, naming conventions are important for readability and maintainability. Component names should be written in PascalCase, while props and functions typically follow camelCase. Clear, descriptive names help make the codebase more understandable and easier to navigate for developers.
+In React, naming conventions are important for readability and maintainability. Component names should be written in `PascalCase`, while props and functions typically follow `camelCase`. Clear, descriptive names help make the codebase more understandable and easier to navigate for developers.
 
 ✅ Correct Usage:
 ![alt text](assets/naming-conventions.png)
 
 ### Enumerate Similar Values
 
-In React, using enum to enumerate similar values provides a structured and readable way to define a set of constant values, ensuring type safety and reducing the risk of errors when accessing or using those values throughout the component
+In React, using `enum` to enumerate similar values provides a structured and readable way to define a set of constant values, ensuring type safety and reducing the risk of errors when accessing or using those values throughout the component.
 
 ✅ Correct Usage:
 ![alt text](assets/enumerate-likevalues.png)
@@ -280,14 +279,14 @@ Writing custom hooks in React is useful when you want to extract and reuse logic
 
 ### Use useCallback and useEffect with the proper dependencies
 
-In React, useCallback is used to memoize functions, preventing unnecessary re-creation of functions between renders, which is useful when passing callbacks to child components. The dependencies array ensures the function is only recreated when specific values change. Similarly, useEffect runs side effects like data fetching or subscriptions, and the dependencies array controls when the effect should re-run, ensuring it's only triggered when its dependencies change, optimizing performance and avoiding infinite loops.
+In React, `useCallback` is used to memoize functions, preventing unnecessary re-creation of functions between renders, which is useful when passing callbacks to child components. The dependencies array ensures the function is only recreated when specific values change. Similarly, `useEffect` runs side effects like data fetching or subscriptions, and the dependencies array controls when the effect should re-run, ensuring it's only triggered when its dependencies change, optimizing performance and avoiding infinite loops.
 
 ✅ Correct Usage:
 ![alt text](assets/use-dependencies.png)
 
 ### Use useMemo to recalculate a derived value from a state change
 
-In React, useMemo is used to efficiently calculate derived properties based on state changes by memoizing the result, ensuring the computation only runs when its dependencies change. This is often preferable to useEffect for such calculations, as it avoids unnecessary side effects and re-renders, providing better performance for computationally expensive operations.
+In React, `useMemo` is used to efficiently calculate derived properties based on state changes by memoizing the result, ensuring the computation only runs when its dependencies change. This is often preferable to `useEffect` for such calculations, as it avoids unnecessary side effects and re-renders, providing better performance for computationally expensive operations.
 
 ✅ Correct Usage:
 ![alt text](assets/usememo-derived.png)
@@ -309,7 +308,7 @@ In React, useMemo is used to efficiently calculate derived properties based on s
 
 ### Use useLayoutEffect
 
-`useLayoutEffect` is useful in React when you need to perform DOM measurements or manipulations before the browser paints the screen. Unlike useEffect, which runs after the render, useLayoutEffect runs synchronously after all DOM mutations but before the screen update, ensuring that any layout changes or measurements are applied without causing visual flickering or delays in rendering.
+`useLayoutEffect` is useful in React when you need to perform DOM measurements or manipulations before the browser paints the screen. Unlike `useEffect`, which runs after the render, `useLayoutEffect` runs synchronously after all DOM mutations but before the screen update, ensuring that any layout changes or measurements are applied without causing visual flickering or delays in rendering.
 
 ✅ Correct Usage:
 ![alt text](assets/uselayout.png)
@@ -324,21 +323,21 @@ Lazy loading components and images in React improves performance by reducing the
 
 ### Avoid infinite API Calls or infinite state changes inside loops
 
-To avoid infinite API calls or infinite state changes when using useEffect, ensure that the dependencies array is correctly specified, only including the necessary variables. Additionally, avoid directly updating state within the effect without proper conditions, as this can trigger continuous re-renders and lead to a loop of API calls or state changes.
+To avoid infinite API calls or infinite state changes when using `useEffect`, ensure that the dependencies array is correctly specified, only including the necessary variables. Additionally, avoid directly updating state within the effect without proper conditions, as this can trigger continuous re-renders and lead to a loop of API calls or state changes.
 
 ❌ Incorrect Usage:
 ![alt text](assets/infinite-useeffect.png)
 
 ### Don't use dangerouslySetInnerHtml
 
-Using dangerouslySetInnerHTML in React should be avoided because it can expose your application to security vulnerabilities like cross-site scripting (XSS) attacks. Instead, opt for safer alternatives, such as using React's built-in rendering methods or sanitizing any input that requires dynamic HTML rendering.
+Using `dangerouslySetInnerHTML` in React should be avoided because it can expose your application to security vulnerabilities like cross-site scripting (XSS) attacks. Instead, opt for safer alternatives, such as using React's built-in rendering methods or sanitizing any input that requires dynamic HTML rendering.
 
 ❌ Incorrect Usage:
 ![alt text](assets/dangerous-html.png)
 
 ### Unregister and clean up timers
 
-In React, it’s important to unregister and clean up timers like setInterval and setTimeout within a component’s useEffect cleanup function to prevent memory leaks and unwanted behavior. This ensures that timers stop running when the component is unmounted or when dependencies change
+In React, it’s important to unregister and clean up timers like `setInterval` and `setTimeout` within a component’s useEffect cleanup function to prevent memory leaks and unwanted behavior. This ensures that timers stop running when the component is unmounted or when dependencies change
 
 ✅ Correct Usage:
 ![alt text](assets/interval-clear.png)
@@ -347,7 +346,7 @@ In React, it’s important to unregister and clean up timers like setInterval an
 
 ### DRY (Do Not Repeat Yourself)
 
-The DRY (Don't Repeat Yourself) principle in React encourages reusing components and logic to avoid duplication in the codebase. By creating modular, reusable components and hooks, developers can maintain cleaner, more efficient code that is easier to update and scale.
+The `DRY (Don't Repeat Yourself)` principle in React encourages reusing components and logic to avoid duplication in the codebase. By creating modular, reusable components and hooks, developers can maintain cleaner, more efficient code that is easier to update and scale.
   
 ### S.O.L.I.D code principles
 
