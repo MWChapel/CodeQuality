@@ -114,8 +114,9 @@ Avoid using hard-coded tokens or values in React components, as they can pose se
 
 ### Fastify and Decorator Pattern
 
-  • Use Fastify: Utilize Fastify as the Node.js framework for building backend services.
-  • Decorator Pattern: Implement the Decorator pattern with Fastify to extend the
+  - Use Fastify: Utilize Fastify as the Node.js framework for building backend services.
+  
+  - Decorator Pattern: Implement the Decorator pattern with Fastify to extend the
   functionality of routes and plugins. This pattern allows for adding new behaviors to existing code in a flexible and reusable manner.
 
   ✅ Correct Usage:
@@ -123,9 +124,9 @@ Avoid using hard-coded tokens or values in React components, as they can pose se
 
 ### API Design
 
-  • `Query` Strings and `POST` Requests for Simple Requests: Optionally use query strings or `POST` requests for API data pulls when there are five or fewer parameters.
-  • `POST` Requests for Complex Queries: Use `POST` requests for API data pulls when there are more than five parameters. This approach helps handle more complex queries efficiently and keeps the request structure organized.
-  • Use of `PUT` for Idempotency: Prefer using the `PUT` method over PATCH for updates to ensure idempotency. `PUT` requests should be used when the full resource is being updated, and the operation can be repeated without changing the result.
+  - `Query` Strings and `POST` Requests for Simple Requests: Optionally use query strings or `POST` requests for API data pulls when there are five or fewer parameters.
+  - `POST` Requests for Complex Queries: Use `POST` requests for API data pulls when there are more than five parameters. This approach helps handle more complex queries efficiently and keeps the request structure organized.
+  - Use of `PUT` for Idempotency: Prefer using the `PUT` method over PATCH for updates to ensure idempotency. `PUT` requests should be used when the full resource is being updated, and the operation can be repeated without changing the result.
 
 ### Repository Pattern
 
@@ -145,11 +146,11 @@ type safety. Use specific types or unknown when the type is not known.
 
 In React with TypeScript, both `interface` and `type` can be used to define the shape of props, state, or other object structures, but each has its own best use cases.
 
-Use `interfaces` when you want to describe the structure of an object and when that structure might be extended or merged, as interfaces support declaration merging and inheritance. This makes them ideal for use cases like defining component props that might need to be extended in the future.
+- Use `interfaces` when you want to describe the structure of an object and when that structure might be extended or merged, as interfaces support declaration merging and inheritance. This makes them ideal for use cases like defining component props that might need to be extended in the future.
 
-On the other hand, use `types` when you need more flexibility, such as defining union types, intersection types, or complex combinations of other types. Types are more suited for situations where you need to work with a variety of types or when the structure won't need extension or merging.
+- On the other hand, use `types` when you need more flexibility, such as defining union types, intersection types, or complex combinations of other types. Types are more suited for situations where you need to work with a variety of types or when the structure won't need extension or merging.
 
-In general, if you're strictly working with object shapes and expect them to be extended, prefer `interfaces`. If you're working with more complex types, or need unions and intersections, prefer `types`.
+- In general, if you're strictly working with object shapes and expect them to be extended, prefer `interfaces`. If you're working with more complex types, or need unions and intersections, prefer `types`.
 
 ✅ Correct Usage:
 ![alt text](assets/type-vs-interface.png)
